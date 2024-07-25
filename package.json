@@ -1,7 +1,7 @@
 {
-  "name": "christiannyamekye.com",
+  "name": "portfolio.v1",
   "version": "0.1.0",
-  "homepage": "https://christiannyamekye.com",
+  "homepage": "https://christiannyamekye.github.io/portfolio.v1/",
   "private": true,
   "shell-quote": "^1.7.2",
   "dependencies": {
