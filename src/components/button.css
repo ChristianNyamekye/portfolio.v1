@@ -1,0 +1,99 @@
+:root {
+  --primary: #64ffda;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #64ffda;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.btn--resume{
+  padding: 12px 26px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+.btn--resume:hover {
+  transition: all 0.3s ease-out;
+  /* background: transparent; */
+  color: #64ffda;
+  transition: 250ms;
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+ 
+}
+
+.btn--get-in-touch{
+  margin-top: 50px;
+  padding: 12px 26px;
+  font-size: 50px;
+  color: #0db8de; 
+  background-color: var(--button-background-color); /* Ensure this variable is defined in your CSS */
+  font-family: 'Pirata One', sans-serif;
+  transition: all 0.3s ease-out; /* Smooth transition for all properties */
+  border: none; /* Assuming you don't want a border, but adjust as needed */
+  outline: none; 
+}
+.btn--get-in-touch:hover {
+  transition: all 0.3s ease-out;
+  background-color: #054b58;
+  color: #0ef;
+  box-shadow: 0 0 5px #054b58, 0 0 15px #054b58, 0 0 10px #054b58, 0 0 50px #054b58,
+    0 0 50px #054b58;
+  transition: 250ms;
+  /* background-color: var(--button-hover-background-color); */
+  cursor: pointer;
+  
+}
+
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #64ffda;
+  color: #242424;
+  transition: 250ms;
+}
+
+/* Animation for the button */
+.animated-button {
+  animation: fadeIn 3000s ease-out forwards;
+  animation-delay: 3000s; /* Adjust the delay as needed */
+  opacity: 0; /* Start with the button invisible */
+}
+
+/* Common fadeIn animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

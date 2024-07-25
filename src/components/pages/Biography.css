@@ -1,0 +1,313 @@
+/* Define the animations */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animations to your elements */
+.biography-container,
+.profile-container,
+.about-heading,
+.about-text,
+.profile-image,
+.social-icon-link,
+.biography-social-icons,
+.education-container,
+.education-details,
+.education-logo {
+  animation-name: fadeInUp;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+
+
+.biography-container {
+  /* color: #6563f0; */
+  font-size: 20px;
+  /* background:#071e41 ; */
+  /* height: 120vh;
+  width: 100%; */
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  
+}
+
+.biography-wrapper{
+  background:#343541 ;
+  background-color:#343541;
+  background-size: 800% 800%;
+  top: 0;
+  left: 0;
+  height: 200vh;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+
+
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 540px; 
+}
+
+.portrait-container {
+  max-height: 212px;
+  /* background-image: url("https://uploads-ssl.webflow.com/5e2520252e290c852ed89624/5eb706f479f88606814078dc_Squiggle%402x.png"); */
+  background-position: 1px;
+  background-repeat: no-repeat;
+  background-size: 16px 120px;
+  position: relative;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+}
+
+
+.about-heading {
+  padding: 40px;
+  color: #64ffda;
+  text-align: center;
+  font-size: 30px;
+  width: 95%; 
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+.about-text {
+  color: #bbbbbb;
+  text-align: left;
+  width: 95%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; 
+  font-family: Times, serif;
+}
+
+
+
+.profile-image {
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover;
+  float: right;
+  margin-right: 300px;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  border-radius: 7%;
+  align-self: center;
+  box-shadow: 0 0 5px #0ef, 0 0 15px #0ef;
+  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.profile-image:hover{
+  /* transform: translateY(-50px); */
+  /* box-shadow: 0 0 5px rgb(4, 241, 75), 0 0 15px #0ef;
+  cursor: pointer; */
+}
+
+.portrait-container:hover {
+  transform: scale(1.60);
+  /* Additional styles */
+}
+
+.portrait-container:hover .profile-image {
+  box-shadow: 0 0 5px rgb(4, 241, 75), 0 0 15px #0ef;
+  cursor: pointer;
+}
+
+.social-icon-link {
+  color: #4fd1c5;
+  align-self: flex-end;
+  
+ 
+}
+
+
+
+.biography-social-icons {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 5rem; 
+  margin-bottom: 30px;
+  margin-left: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #0ef, 0 0 15px #0ef;
+}
+
+.biography-social-icons a {
+    margin: 0 10px;
+}
+
+.biography-social-icons:hover{
+  background: rgb(22, 114, 120);
+  box-shadow: 0 0 5px #c9f9d3, 0 0 15px #92eba6, 0 0 10px #92eba6, 0 0 50px #92eba6,
+    0 0 50px #396643;
+
+}
+
+.education-container {
+  background: #1f3a3e; /* Dark background */
+  color: #64ffda; /* Cyber-themed highlight color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px;
+  margin-top: 50px; /* Space from the top */
+  display: flex;
+  align-items: center; 
+  box-shadow: 0 0 5px #0ef, 0 0 15px #0ef; /* Subtle shadow */
+  cursor: pointer;
+}
+
+.education-container:hover {
+  /* background: rgb(22, 114, 120);
+  box-shadow: 0 0 5px #c9f9d3, 0 0 15px #92eba6, 0 0 10px #92eba6, 0 0 50px #92eba6,
+    0 0 50px #396643; */
+  background: transparent;
+}
+
+.education-logo {
+  /* Adjust your logo dimensions as needed */
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 800px;
+}
+
+.education-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #ffffff; /* Light text */
+  margin-bottom: 10px;
+}
+
+.education-degree {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  color: #bbbbbb; /* Subtle text color */
+}
+
+.education-duration {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #aaaaaa; /* Even more subtle text color */
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+ 
+  .profile-container {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Adjust gap for mobile */
+  }
+
+  .portrait-container {
+    background-size: contain; /* Adjust background size for mobile */
+  }
+  
+  .about-heading{
+    font-size: 1.5rem; /* Adjust font size for readability */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .about-text {
+    font-size: 0.5rem; /* Adjust font size for readability */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .profile-image {
+    width: 150px; /* Adjust size for mobile */
+    height: 150px; /* Adjust size for mobile */
+    margin-right: 0; /* Align center */
+    margin-top: 2rem; /* Adjust margin */
+  }
+ 
+
+  .education-container {
+    flex-direction: column; /* Stack logo and details vertically */
+    text-align: center; /* Center text for a better look on small screens */
+  }
+
+  .education-logo {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 20px; /* Add space below the logo */
+  }
+
+  .education-details {
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+
+  .biography-social-icons {
+    flex-direction: row; /* Stack icons vertically */
+    margin-left: 0; /* Reset margin */
+    gap: 10px; /* Adjust gap between icons */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .education-title,
+  .education-degree,
+  .education-duration {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .biography-social-icons {
+    flex-direction: row; /* Stack icons vertically */
+    margin-left: 0; /* Reset margin */
+    gap: 10px; /* Adjust gap between icons */
+  }
+}
+
+
+.bio-statement-and-portrait {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1.4fr;
+  margin-top: 48px;
+}
+
+.w-layout-grid {
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+  padding: 20px;
+  margin-left: 60px;
+}
+
+.personal-statement {
+  letter-spacing: -.015em;
+}

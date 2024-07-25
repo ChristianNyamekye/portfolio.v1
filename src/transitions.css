@@ -1,0 +1,51 @@
+/* transitions.css */
+.fade-slide-enter {
+  opacity: 0;
+  transform: scale(0.95) translateX(-100%);
+  z-index: 1;
+}
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: scale(1) translateX(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-slide-exit {
+  opacity: 1;
+  transform: scale(1) translateX(0%);
+}
+.fade-slide-exit-active {
+  opacity: 0;
+  transform: scale(0.95) translateX(100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Add this inside your transitions.css */
+@keyframes glitch {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+    transform: skew(0.40deg);
+  }
+  5% {
+    clip: rect(8px, 9999px, 100px, 0);
+    transform: skew(0.40deg);
+  }
+  10% {
+    clip: rect(30px, 9999px, 70px, 0);
+    transform: skew(0.40deg);
+  }
+  /* Add more steps to make the glitch effect more random */
+  100% {
+    clip: rect(80px, 9999px, 90px, 0);
+    transform: skew(0.40deg);
+  }
+}
+
+.fade-slide-enter-active {
+  /* ...existing properties... */
+  animation: glitch 1s linear infinite;
+}
+
+.fade-slide-exit-active {
+  /* ...existing properties... */
+  animation: glitch 1s linear infinite;
+}

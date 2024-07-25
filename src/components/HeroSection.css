@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+/* Define the animations */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animations to your elements */
+.hero-container > h2,
+.hero-container > p,
+.hero-btns .btn,
+.work-experience-container h2,
+.work-experience-card,
+.work-experience-info,
+.work-experience-logo,
+.work-experience-cards
+ {
+  animation-name: fadeInUp;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* or any cool background color */
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.hero-container {
+  /* background: url('/public/images/img-home.jpg') center center/cover no-repeat; */
+  /* width: 100vw;
+  height: 100vh; */
+  background:#343541 ;
+  background-color:#343541;
+  background-size: 400% 400%;
+  height: 530vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
+  object-fit: contain;
+  animation: gradientFlow 30s ease infinite;
+  z-index: -1;
+  
+}
+/* Initial height for large screens */
+
+
+/* Adjust height for medium screens */
+@media only screen and (max-width: 1023px) {
+  .hero-container {
+    height: auto; /* Height can adjust to the content */
+    padding-bottom: 5vh; /* Add some padding at the bottom */
+  }
+}
+
+/* Adjust height for smaller screens */
+@media only screen and (max-width: 768px) {
+  .hero-container {
+    height: auto; /* Height can adjust to the content */
+    padding-bottom: 10vh; /* More padding at the bottom for very small screens */
+  }
+}
+
+/* If you need additional responsiveness for very small devices */
+@media only screen and (max-width: 480px) {
+  .hero-container {
+    /* Adjust styles for small devices */
+    padding-bottom: 15vh; /* Even more padding at the bottom */
+  }
+}
+
+.hero-container > h2 {
+  color: #0ef;
+  font-size: 100px;
+  margin-top: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+  border-radius: 10px;
+  padding: 12px 28px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, text-shadow 0.3s,color 1s ease;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
+
+.hero-container >h2:hover {
+  transform: scale(1.3) rotate(-10deg);
+  text-shadow: 4px 4px 20px rgb(90, 135, 139);
+  color: #64ffda; /* Change to a bright, contrasting color */
+  background-color: rgba(14, 238, 255, 0.1);
+  box-shadow: 0 0 5px #c9f9d3, 0 0 10px #c9f9d3;
+  /* border-radius: 20px; */
+}
+
+.hero-container > h3 {
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.hero-container > p {
+  margin-top: 30px;
+  color: #4fd1c5;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.hero-btns {
+  margin-top: 32px;
+}
+
+.hero-btns .btn {
+  margin: 6px;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+.work-experience-container {
+  margin-top: 2rem; /* Space from the typed-text */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 250px;
+}
+
+.work-experience-container h2 {
+  color: #64ffda; /* Heading color */
+  margin-top: 300px;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px; /* Space between cards */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  animation-delay: 0.5s; /* Delay the animation */
+}
+
+.work-experience-card {
+  flex: 0 1 calc(50% - 20px);
+  background: #1f3a3e; /* Card background */
+  color: #ffffff;
+  border-radius: 15px; /* Rounded corners for the cards */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex;
+  align-items: center;
+  animation:  1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef, 0 0 10px #0ef;
+  cursor: pointer;
+  
+}
+
+.work-experience-card:hover {
+  background: transparent;
+  /* background: rgb(22, 114, 120); */
+  box-shadow: 0 0 5px #c9f9d3, 0 0 10px #c9f9d3;
+  /* box-shadow: 0 0 5px #c9f9d3, 0 0 15px #92eba6, 0 0 10px #92eba6, 0 0 50px #92eba6,
+    0 0 50px #396643; */
+}
+
+.work-experience-logo {
+  width: 60px; /* Logo size */
+  height: 60px; /* Logo size */
+  margin-right: 1rem;
+}
+
+.work-experience-info h4 {
+  color: #64ffda; /* Info heading color */
+  margin-bottom: 0.5rem;
+}
+
+.work-experience-info p {
+  color: #bbbbbb; /* Info text color */
+  font-size: 0.9rem;
+}
+/* For screens smaller than or equal to 1024px */
+@media only screen and (max-width: 1024px) {
+  .work-experience-cards {
+    flex-direction: column;
+    flex: 0 1 100%;
+    align-items: center; /* Center the cards */
+  }
+
+  .work-experience-card {
+    width: 84%; /* Set width to 84% */
+    margin-bottom: 0.5rem;
+    margin-left: auto; /* Center the card */
+    margin-right: auto; /* Center the card */
+  }
+}
+
+/* For screens smaller than or equal to 768px */
+@media only screen and (max-width: 768px) {
+  .work-experience-card {
+    width: 84%; /* Maintain 84% width */
+    margin-bottom: 1rem;
+    /* Margins for auto left and right are already set above, so they will be inherited */
+  }
+}
+
+/* For screens wider than 1024px */
+@media only screen and (min-width: 1024px) {
+  .work-experience-cards {
+    /* Add any specific styles for larger screens if needed */
+  }
+  .work-experience-card {
+    /* Add any specific styles for larger screens if needed */
+  }
+}
+
+/* For screens wider than 1200px */
+@media only screen and (min-width: 1200px) {
+  .work-experience-container {
+    width: 80%;
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+  }
+}
+
+/* @media (max-width: 768px) {
+  .work-experience-cards {
+    flex-direction: column; 
+    flex: 0 1 100%;
+  }
+
+  .work-experience-card {
+    width: 50%; 
+    margin-bottom: 1rem;
+  }
+} */
+
+/* @media only screen and (min-width: 1200px) {
+  .work-experience-container {
+    width: 84%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .work-experience-cards {
+    flex-direction: column; 
+    flex: 0 1 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .work-experience-card {
+    margin-bottom: 0.5rem;
+  }
+} */
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+
+  .hero-container > p {
+    font-size: 30px;
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.typed-text {
+  font-family: 'Times New Roman', Times, serif !important;
+  /* background:#0a192f ; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6vh;
+  justify-content: center;
+  width: 50%;
+  margin-top: 150px; 
+  color: #0ef; 
+  font-size: 2rem;
+  animation: fadeInUp 5s 1s ease-out forwards;
+  transition: transform 0.3s ease-out, color 0.3s ease-out, box-shadow 0.3s ease-out; /* Add transition effects */
+  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+  /* animation: gradientFlow 30s ease infinite; */
+
+}
+.typed-text:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  color: #0ef; /* Change text color */
+  box-shadow: 0 0 20px #0ef; /* Add a glow effect */
+}
+
+/* Scroll Indicator Container */
+.scroll-indicator-container {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 150px;
+    width: 8px; 
+    background: transparent;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+}
+
+/* Scroll Indicator Bar */
+.scroll-indicator {
+    height: 0%;
+    width: 100%;
+    background: linear-gradient(to top, #1f3a3e, #0ef);
+    border-radius: 4px;
+    transition: height 0.3s ease, filter 0.3s ease;
+    filter: blur(2px);
+    box-shadow: 0 0 8px #0ef;
+}
+
+/* Hover Effect */
+.scroll-indicator-container:hover .scroll-indicator {
+    filter: blur(4px);
+    box-shadow: 0 0 12px #1f3a3e, 0 0 20px #0ef inset;
+}
+
+/* Animation on Page Load */
+@keyframes glowAnimation {
+    0%, 100% { box-shadow: 0 0 8px #0ef; }
+    50% { box-shadow: 0 0 12px #0ef; }
+}
+
+.scroll-indicator {
+    animation: glowAnimation 2s infinite alternate;
+}
+
+
+.animated-gradient {
+  /* background: #0a192f; */
+  /* background: linear-gradient(-45deg,#0a192f, #051129, #084179, #0a192f); */
+  
+  /* background: linear-gradient(-45deg,#315a80, #3b707d, #878aa3, #1f3a3e); */
+
+  background: linear-gradient(-45deg,#1f3a3e, #3b707d, #315a80, #878aa3);
+  /* background-size: 400% 400%; */
+  animation:  gradientBackground 60s ease infinite;
+  /* rotateBackground 30s linear infinite, */
+
+
+  /* box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8; */
+
+}
+
+
+
+.element {
+  animation: backgroundZoom 30s ease infinite;
+}
+
+@keyframes fadeBackground {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+@keyframes rotateBackground {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+@keyframes backgroundZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .typed-text {
+    font-size: 20px; /* Smaller font size on mobile */
+    width: 50%; /* Increase width to provide more space */
+    margin-top: 100px; /* Decrease top margin */
+     height: 16vh; /* Adjust height based on content */
+    max-width: 15%;
+  }
+}
